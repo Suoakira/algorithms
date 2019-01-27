@@ -117,7 +117,17 @@ class FreeCodeCampBeginAlgo extends Component {
     }
     // truncation
     // myTruncatedString = myString.substring(0, length)
+    
+    findElement = (arr, func) => {
+    let num = 0
+    num = arr.find(num => func(num) )
+    return num;
+    }
 
+    // use typeof
+    booWho = (bool) => {
+        return (typeof bool === 'boolean') ? true : false 
+    }
 
     
 
@@ -137,7 +147,10 @@ class FreeCodeCampBeginAlgo extends Component {
                 <p>6. confirmEnding: {this.confirmEnding("Congratulation", "on")} <button onClick={() => alert(this.confirmEnding)}>Click to See Function</button></p>
                 <p>7. repeatStringNumTimes: {this.repeatStringNumTimes("abc", 3)} <button onClick={() => alert(this.repeatStringNumTimes)}>Click to See Function</button></p>
                 <p>8. truncateString: {this.truncateString("A-tisket a-tasket A green and yellow basket", 8)}  <button onClick={() => alert(this.truncateString)}>Click to See Function</button></p>
-                <p></p>
+                <p>9. findElement: {this.findElement([1, 2, 3, 4], num => num % 2 === 0)} <button onClick={() => alert(this.findElement)}>Click to See Function</button></p>
+                <div>Check if a value is classified as a boolean primitive. Return true or false.
+                    <p>10. booWho: {this.booWho(null)} <button onClick={() => alert(this.booWho)}>Click to See Function</button></p>
+                </div>
 
             </React.Fragment>
          )
