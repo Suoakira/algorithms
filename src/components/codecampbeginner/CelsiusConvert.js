@@ -130,13 +130,13 @@ class FreeCodeCampBeginAlgo extends Component {
         return ( 
             <React.Fragment>   
                 <p>1. Conversion: {this.convertToF(32)}  <button onClick={() => alert(this.convertToF)}>Click to See Function</button></p>
-                <p>2. ReverString: {this.reverseString("hello")}</p>
-                <p>3. Factorialize: {this.factorialize(5)}</p>
-                <p>4. LongestString: {this.findLongestWordLength("The quick brown fox jumped over the lazy dog")}</p>
-                <p>5. largestOfFour: {this.largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])}</p>
-                <p>6. confirmEnding: {this.confirmEnding("Congratulation", "on")}</p>
-                <p>7. repeatStringNumTimes: {this.repeatStringNumTimes("abc", 3)}</p>
-                <p>8. truncateString: {this.truncateString("A-tisket a-tasket A green and yellow basket", 8)} </p>
+                <p>2. ReverString: {this.reverseString("hello")} <button onClick={() => alert(this.reverseString)}>Click to See Function</button></p>
+                <p>3. Factorialize: {this.factorialize(5)} <button onClick={() => alert(this.factorialize)}>Click to See Function</button></p>
+                <p>4. LongestString: {this.findLongestWordLength("The quick brown fox jumped over the lazy dog")} <button onClick={() => alert(this.findLongestWordLength)}>Click to See Function</button></p>
+                <p>5. largestOfFour: {this.largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])} <button onClick={() => alert(this.largestOfFour)}>Click to See Function</button></p>
+                <p>6. confirmEnding: {this.confirmEnding("Congratulation", "on")} <button onClick={() => alert(this.confirmEnding)}>Click to See Function</button></p>
+                <p>7. repeatStringNumTimes: {this.repeatStringNumTimes("abc", 3)} <button onClick={() => alert(this.repeatStringNumTimes)}>Click to See Function</button></p>
+                <p>8. truncateString: {this.truncateString("A-tisket a-tasket A green and yellow basket", 8)}  <button onClick={() => alert(this.truncateString)}>Click to See Function</button></p>
                 <p></p>
 
             </React.Fragment>
