@@ -129,6 +129,39 @@ class FreeCodeCampBeginAlgo extends Component {
         return (typeof bool === 'boolean') ? true : false 
     }
 
+    // remember with this one just that strings are immutable
+    titleCase = (str) => {
+        str = str.toLowerCase()
+        let splitArray = str.split(" ")
+        const transformedArray = []
+        splitArray.forEach(word => {
+            return transformedArray.push(word.charAt(0).toUpperCase() + word.slice(1))
+        })
+        return transformedArray.join(" ") 
+    }
+    
+    frankenSplice = (arr1, arr2, n) => {  
+    // make a new array with a shaddow copy of array 2
+    let NewArr = arr2.slice()
+    // splices at position n, deletes 0 elements inserts array1
+    NewArr.splice(n, 0, ...arr1);
+    return NewArr;
+}
+    // this method converts all values to either a boonlean truthy or falsy
+    bouncer = (arr) => {
+        const filterTruthys = arr.filter(value => !!value === true )
+        return filterTruthys
+    }
+
+    getIndexToIns = (arr, num) => {
+        arr.push(num)
+        arr.sort((a, b) => { return a - b })
+        return arr.indexOf(num)
+    }
+    
+
+
+
     
 
 
@@ -138,7 +171,8 @@ class FreeCodeCampBeginAlgo extends Component {
     render() { 
         console.log(this.truncateString)
         return ( 
-            <React.Fragment>   
+            <React.Fragment> 
+                Basic Alogorithms  
                 <p>1. Conversion: {this.convertToF(32)}  <button onClick={() => alert(this.convertToF)}>Click to See Function</button></p>
                 <p>2. ReverString: {this.reverseString("hello")} <button onClick={() => alert(this.reverseString)}>Click to See Function</button></p>
                 <p>3. Factorialize: {this.factorialize(5)} <button onClick={() => alert(this.factorialize)}>Click to See Function</button></p>
@@ -150,6 +184,18 @@ class FreeCodeCampBeginAlgo extends Component {
                 <p>9. findElement: {this.findElement([1, 2, 3, 4], num => num % 2 === 0)} <button onClick={() => alert(this.findElement)}>Click to See Function</button></p>
                 <div>Check if a value is classified as a boolean primitive. Return true or false.
                     <p>10. booWho: {this.booWho(null)} <button onClick={() => alert(this.booWho)}>Click to See Function</button></p>
+                </div>
+                <div>Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+                    <p>11. titleCase: {this.titleCase("I'm a little tea pot")} <button onClick={() => alert(this.titleCase)}>Click to See Function</button></p>
+                </div>
+                <div>Use the array methods slice and splice to copy each element of the first array into the second array, in order.
+                    <p>12. frankenSplice: {this.frankenSplice([1, 2, 3], [4, 5, 6], 1)} <button onClick={() => alert(this.frankenSplice)}>Click to See Function</button></p>
+                </div>
+                <div>Remove all falsy values from an array.
+                    <p>13. bouncer: {this.bouncer([7, "ate", "", false, 9])} <button onClick={() => alert(this.bouncer)}>Click to See Function</button></p>
+                </div>
+                <div>Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+                    <p>1. getIndexToIns: {this.getIndexToIns([5, 3, 20, 3], 5)} <button onClick={() => alert(this.getIndexToIns)}>Click to See Function</button></p>
                 </div>
 
             </React.Fragment>
