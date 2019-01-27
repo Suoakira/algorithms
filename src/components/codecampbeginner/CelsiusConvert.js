@@ -195,7 +195,7 @@ class FreeCodeCampBeginAlgo extends Component {
                     <p>13. bouncer: {this.bouncer([7, "ate", "", false, 9])} <button onClick={() => alert(this.bouncer)}>Click to See Function</button></p>
                 </div>
                 <div>Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
-                    <p>1. getIndexToIns: {this.getIndexToIns([5, 3, 20, 3], 5)} <button onClick={() => alert(this.getIndexToIns)}>Click to See Function</button></p>
+                    <p>14. getIndexToIns: {this.getIndexToIns([5, 3, 20, 3], 5)} <button onClick={() => alert(this.getIndexToIns)}>Click to See Function</button></p>
                 </div>
 
             </React.Fragment>
