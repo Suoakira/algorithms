@@ -154,9 +154,21 @@ class FreeCodeCampBeginAlgo extends Component {
     }
 
     getIndexToIns = (arr, num) => {
+        // pushs the number into the array, then is able to sort by its index
         arr.push(num)
         arr.sort((a, b) => { return a - b })
         return arr.indexOf(num)
+    }
+
+
+    mutation = (arr) => {
+        let test = arr[1].toLowerCase()
+        let target = arr[0].toLowerCase()
+        for (let i = 0; i < test.length; i++) {
+            if (target.indexOf(test[i]) === -1)
+                return false
+        }
+        return true
     }
     
 
@@ -196,6 +208,9 @@ class FreeCodeCampBeginAlgo extends Component {
                 </div>
                 <div>Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
                     <p>14. getIndexToIns: {this.getIndexToIns([5, 3, 20, 3], 5)} <button onClick={() => alert(this.getIndexToIns)}>Click to See Function</button></p>
+                </div>
+                <div>Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array..
+                    <p>15. mutation: {this.mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])} <button onClick={() => alert(this.mutation)}>Click to See Function</button></p>
                 </div>
 
             </React.Fragment>
