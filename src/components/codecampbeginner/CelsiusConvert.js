@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Segment, Header } from "semantic-ui-react"
+
+
 class FreeCodeCampBeginAlgo extends Component {
     constructor(props) {
         super(props);
@@ -75,10 +77,10 @@ class FreeCodeCampBeginAlgo extends Component {
         let strEndsWith = ""
         let counter = 0
         for (let i = 0; i < tarLength; tarLength--) {
-            console.log(tarLength)
+
             counter += 1
             strEndsWith += str.charAt(strLength - counter)
-            console.log(strEndsWith)
+
         }
         // reverses the string
         strEndsWith = strEndsWith.split("").reverse().join("")
@@ -170,6 +172,44 @@ class FreeCodeCampBeginAlgo extends Component {
         }
         return true
     }
+
+    chunkArrayInGroups = (arr, size) => {
+        let startSlice = 0
+        let endSlice = size
+
+        let arrLength = arr.length
+        let dividedTimes = arrLength/size 
+        dividedTimes = Math.floor(dividedTimes)
+
+        let slicePosition = dividedTimes * size
+        console.log(slicePosition)
+        console.log(dividedTimes)
+
+
+        const chunkedArray = []
+        let leftOver = undefined
+        let slice = arr.slice(startSlice, endSlice)
+
+        if ((arrLength%size) !== 0) {
+            while (endSlice <= arr.length) {
+            chunkedArray.push(arr.slice(startSlice, endSlice))
+            startSlice += size 
+            endSlice += size
+            } 
+            console.log(chunkedArray)
+            leftOver = arr.slice(slicePosition)
+            chunkedArray.push(leftOver)
+
+        } else {
+            while (endSlice <= arr.length) {
+                chunkedArray.push(arr.slice(startSlice, endSlice))
+                startSlice += size
+                endSlice += size
+            }
+        } 
+        return chunkedArray
+
+    }
     
 
 
@@ -181,7 +221,7 @@ class FreeCodeCampBeginAlgo extends Component {
 
 
     render() { 
-        console.log(this.truncateString)
+
         return ( 
             <Segment> 
                 <Header>Basic Alogorithms </Header>
@@ -238,8 +278,13 @@ class FreeCodeCampBeginAlgo extends Component {
                     </div>
                 </Segment>
                 <Segment>
-                    <div>Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array..
+                    <div>Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
                         <p>15. mutation: {this.mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])} <button onClick={() => alert(this.mutation)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
+                <Segment>
+                    <div>rite a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+                        <p>15. chunkArrayInGroups: {this.chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)} <button onClick={() => alert(this.chunkArrayInGroups)}>Click to See Function</button></p>
                     </div>
                 </Segment>
 

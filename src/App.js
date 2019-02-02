@@ -14,7 +14,7 @@ class App extends Component {
         <Grid>
           <Grid.Row>
             <Grid.Column width={16} >
-              <Header size="Large">Coding Sandbox</Header>
+            <Header size="huge">Coding Sandbox</Header>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
