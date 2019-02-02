@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Segment } from "semantic-ui-react"
 
 class ThirtyDayChallenge extends Component {
     constructor(props) {
@@ -6,7 +7,11 @@ class ThirtyDayChallenge extends Component {
         this.state = {  }
     }
     render() { 
-        return ( <p><button ></button></p> );
+        return ( 
+            <Segment>
+                
+            </Segment>
+         )
     }
 }
  

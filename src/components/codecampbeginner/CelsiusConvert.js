@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { Segment, Header } from "semantic-ui-react"
 class FreeCodeCampBeginAlgo extends Component {
     constructor(props) {
         super(props);
@@ -183,37 +183,67 @@ class FreeCodeCampBeginAlgo extends Component {
     render() { 
         console.log(this.truncateString)
         return ( 
-            <React.Fragment> 
-                Basic Alogorithms  
-                <p>1. Conversion: {this.convertToF(32)}  <button onClick={() => alert(this.convertToF)}>Click to See Function</button></p>
-                <p>2. ReverString: {this.reverseString("hello")} <button onClick={() => alert(this.reverseString)}>Click to See Function</button></p>
-                <p>3. Factorialize: {this.factorialize(5)} <button onClick={() => alert(this.factorialize)}>Click to See Function</button></p>
-                <p>4. LongestString: {this.findLongestWordLength("The quick brown fox jumped over the lazy dog")} <button onClick={() => alert(this.findLongestWordLength)}>Click to See Function</button></p>
-                <p>5. largestOfFour: {this.largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])} <button onClick={() => alert(this.largestOfFour)}>Click to See Function</button></p>
-                <p>6. confirmEnding: {this.confirmEnding("Congratulation", "on")} <button onClick={() => alert(this.confirmEnding)}>Click to See Function</button></p>
-                <p>7. repeatStringNumTimes: {this.repeatStringNumTimes("abc", 3)} <button onClick={() => alert(this.repeatStringNumTimes)}>Click to See Function</button></p>
-                <p>8. truncateString: {this.truncateString("A-tisket a-tasket A green and yellow basket", 8)}  <button onClick={() => alert(this.truncateString)}>Click to See Function</button></p>
-                <p>9. findElement: {this.findElement([1, 2, 3, 4], num => num % 2 === 0)} <button onClick={() => alert(this.findElement)}>Click to See Function</button></p>
-                <div>Check if a value is classified as a boolean primitive. Return true or false.
-                    <p>10. booWho: {this.booWho(null)} <button onClick={() => alert(this.booWho)}>Click to See Function</button></p>
-                </div>
-                <div>Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
-                    <p>11. titleCase: {this.titleCase("I'm a little tea pot")} <button onClick={() => alert(this.titleCase)}>Click to See Function</button></p>
-                </div>
-                <div>Use the array methods slice and splice to copy each element of the first array into the second array, in order.
-                    <p>12. frankenSplice: {this.frankenSplice([1, 2, 3], [4, 5, 6], 1)} <button onClick={() => alert(this.frankenSplice)}>Click to See Function</button></p>
-                </div>
-                <div>Remove all falsy values from an array.
-                    <p>13. bouncer: {this.bouncer([7, "ate", "", false, 9])} <button onClick={() => alert(this.bouncer)}>Click to See Function</button></p>
-                </div>
-                <div>Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
-                    <p>14. getIndexToIns: {this.getIndexToIns([5, 3, 20, 3], 5)} <button onClick={() => alert(this.getIndexToIns)}>Click to See Function</button></p>
-                </div>
-                <div>Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array..
-                    <p>15. mutation: {this.mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])} <button onClick={() => alert(this.mutation)}>Click to See Function</button></p>
-                </div>
+            <Segment> 
+                <Header>Basic Alogorithms </Header>
+                <Segment>
+                    1. Conversion: {this.convertToF(32)}  <button onClick={() => alert(this.convertToF)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    2. ReverString: {this.reverseString("hello")} <button onClick={() => alert(this.reverseString)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    3. Factorialize: {this.factorialize(5)} <button onClick={() => alert(this.factorialize)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    4. LongestString: {this.findLongestWordLength("The quick brown fox jumped over the lazy dog")} <button onClick={() => alert(this.findLongestWordLength)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    5. largestOfFour: {this.largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])} <button onClick={() => alert(this.largestOfFour)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    6. confirmEnding: {this.confirmEnding("Congratulation", "on")} <button onClick={() => alert(this.confirmEnding)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    7. repeatStringNumTimes: {this.repeatStringNumTimes("abc", 3)} <button onClick={() => alert(this.repeatStringNumTimes)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    8. truncateString: {this.truncateString("A-tisket a-tasket A green and yellow basket", 8)}  <button onClick={() => alert(this.truncateString)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    9. findElement: {this.findElement([1, 2, 3, 4], num => num % 2 === 0)} <button onClick={() => alert(this.findElement)}>Click to See Function</button>
+                </Segment>
+                <Segment>
+                    <div>Check if a value is classified as a boolean primitive. Return true or false.
+                        <p>10. booWho: {this.booWho(null)} <button onClick={() => alert(this.booWho)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
+                <Segment>
+                    <div>Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+                        <p>11. titleCase: {this.titleCase("I'm a little tea pot")} <button onClick={() => alert(this.titleCase)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
+                <Segment>
+                    <div>Use the array methods slice and splice to copy each element of the first array into the second array, in order.
+                        <p>12. frankenSplice: {this.frankenSplice([1, 2, 3], [4, 5, 6], 1)} <button onClick={() => alert(this.frankenSplice)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
+                <Segment>
+                    <div>Remove all falsy values from an array.
+                        <p>13. bouncer: {this.bouncer([7, "ate", "", false, 9])} <button onClick={() => alert(this.bouncer)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
+                    <Segment>
+                    <div>Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+                        <p>14. getIndexToIns: {this.getIndexToIns([5, 3, 20, 3], 5)} <button onClick={() => alert(this.getIndexToIns)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
+                <Segment>
+                    <div>Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array..
+                        <p>15. mutation: {this.mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"])} <button onClick={() => alert(this.mutation)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
 
-            </React.Fragment>
+            </Segment>
          )
     }
 }

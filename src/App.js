@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import FreeCodeCampBegAlgo from "./components/codecampbeginner/CelsiusConvert"
-import ThirtyDayChallenge from 'components/codecampbeginner/ThirtyDayChallenge'
-// import 'semantic-ui-css/semantic.min.css'
+import ThirtyDayChallenge from "./components/HackerRank/ThirtyDayCallenge"
+
+import { Header } from "semantic-ui-react"
+import 'semantic-ui-css/semantic.min.css'
 
 import { Grid } from "semantic-ui-react"
 
@@ -12,7 +14,7 @@ class App extends Component {
         <Grid>
           <Grid.Row>
             <Grid.Column width={16} >
-              <header>Coding Sandbox</header>
+              <Header size="Large">Coding Sandbox</Header>
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
