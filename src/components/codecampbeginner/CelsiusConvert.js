@@ -210,6 +210,26 @@ class FreeCodeCampBeginAlgo extends Component {
         return chunkedArray
 
     }
+
+    chunkArrayInGroups = (arr, size) => {
+
+    var temp = [];
+    var result = [];
+
+    for (var a = 0; a < arr.length; a++) {
+        if (a % size !== size - 1)
+            temp.push(arr[a]);
+        else {
+            temp.push(arr[a]);
+            result.push(temp);
+            temp = [];
+        }
+    }
+
+    if (temp.length !== 0)
+        result.push(temp);
+    return result;
+    }
     
 
 
@@ -283,7 +303,7 @@ class FreeCodeCampBeginAlgo extends Component {
                     </div>
                 </Segment>
                 <Segment>
-                    <div>rite a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+                    <div>Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
                         <p>15. chunkArrayInGroups: {this.chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)} <button onClick={() => alert(this.chunkArrayInGroups)}>Click to See Function</button></p>
                     </div>
                 </Segment>
