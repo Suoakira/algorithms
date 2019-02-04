@@ -30,17 +30,21 @@ class ThirtyDayChallenge extends Component {
     // }
 
     diffArray(arr1, arr2) {
-        const finalArray = []
         let newArr = []
         // Same, same; but different.
         const orderedArrays = (arr1.length >= arr2.length) ? [arr1, arr2] : [arr2, arr1]
+        const diffInArrayLength = orderedArrays[0].length - orderedArrays[1].length
+        for (let i = 0; i < diffInArrayLength; i++) {
+            orderedArrays[1].push(undefined)
+        }
+
         newArr = orderedArrays[0].filter(element => !orderedArrays[1].includes(element))
-        const extraArray = orderedArrays[1].filter(element => !orderedArrays[0].includes(element))
-        console.log(extraArray)
-        // [finalArray[0], ...extraArray]
-            console.log(newArr)
+        newArr.push(orderedArrays[1].filter(element => !orderedArrays[0].includes(element))[0])
+
+        newArr = newArr.filter(element => { return element !== undefined })
+        console.log(newArr)
         return newArr
-}
+    }
 
 
 
@@ -55,7 +59,7 @@ class ThirtyDayChallenge extends Component {
                 </Segment>
                 <Segment>
                     <div>Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
-                        <p>1. diffArray: {this.diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])} <button onClick={() => alert(this.diffArray)}>Click to See Function</button></p>
+                        <p>1. diffArray: {this.diffArray([1, "calf", 3, "piglet"], [7, "filly"])} <button onClick={() => alert(this.diffArray)}>Click to See Function</button></p>
                     </div>
                 </Segment>
             </Segment>
