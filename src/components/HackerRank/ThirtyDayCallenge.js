@@ -42,9 +42,26 @@ class ThirtyDayChallenge extends Component {
         newArr.push(orderedArrays[1].filter(element => !orderedArrays[0].includes(element))[0])
 
         newArr = newArr.filter(element => { return element !== undefined })
-        console.log(newArr)
         return newArr
     }
+
+    // console.log seems to work with  regular functions, just not arrow syntax
+    destroyer(arr) {
+    // Remove all the values
+        let argLastIndex = (arguments.length - 1)
+        // could of just deleated first item which was the array, then assumed rest were numbers to delete
+        for (let i = argLastIndex; 0 < i;  i-- ) {
+            arr = arr.filter(num => num !== arguments[i])
+        }
+        return arr
+
+    }
+
+
+    whatIsInAName(collection, source) {
+
+    }
+    
 
 
 
@@ -60,6 +77,16 @@ class ThirtyDayChallenge extends Component {
                 <Segment>
                     <div>Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
                         <p>1. diffArray: {this.diffArray([1, "calf", 3, "piglet"], [7, "filly"])} <button onClick={() => alert(this.diffArray)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
+                <Segment>
+                    <div>You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+                        <p>1. destroyer: {this.destroyer([3, 5, 1, 2, 2], 2, 3, 5)} <button onClick={() => alert(this.destroyer)}>Click to See Function</button></p>
+                    </div>
+                </Segment>
+                <Segment>
+                    <div>Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). 
+                        <p>1. whatIsInAName: {this.whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" })} <button onClick={() => alert(this.whatIsInAName)}>Click to See Function</button></p>
                     </div>
                 </Segment>
             </Segment>
